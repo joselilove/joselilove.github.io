@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-
+    <title>Joselin Macayanan</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Selin">
-    <link rel="icon" href="img/portfolio.ico" sizes="32x32 type=" image/x-icon">
-    
-
-
-    <title>Joselin Macayanan</title>
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="img/portfolio.ico" sizes="32x32 type=" image/x-icon"> <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="css/resume.css" rel="stylesheet">
+    <link href="css/resume.css?v=1414" rel="stylesheet">
 
 </head>
 
@@ -52,17 +52,31 @@
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
             <div class="w-100">
                 <h1 class="mb-0">Macayanan, Joselin T.</h1>
-                <h3 class="mt-5">Objectives</h3>
-                <p class="lead mb-5">To be part of company that indulges professional growth which provides challenging
-                    and rewarding career while allowing me to utilize my knowledge and skills.</p>
+                <h3 class="mt-5">I'm a backend web developer</h3>
             </div>
         </section>
         <hr class="m-0">
 
         <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="portfolio">
             <div class="w-100">
-                <h2 class="mb-5">Portfolio</h2>
-                
+                <h2 class="mb-5">Projects</h2>
+
+                <div class="container" id="project-list">
+                    <div class="row g-2">
+                        <div class="col-6" v-for="todo in todos">
+                            <div class="hover hover-2 text-white rounded">
+                                <img v-bind:src="todo.image" alt="">
+                                <div class="hover-overlay"></div>
+                                <div class="hover-2-content px-5 py-4">
+                                    <h3 class="hover-2-title text-uppercase font-weight-bold mb-0">
+                                        <span class="fw-bold text-white">{{ todo.title }}</span>
+                                    </h3>
+                                    <p class="hover-2-description text-uppercase mb-0">{{ todo.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -84,20 +98,55 @@
                     <a href="https://www.facebook.com/jonh.macayanan">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="file/joselin_macayanan_resume.docx">
+                    <a href="file/joselin_macayanan_resume.pdf">
                         <i class="fas fa-file"></i>
                     </a>
                 </div>
             </div>
         </section>
-
     </div>
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/resume.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </body>
+
+<script>
+    var projectList = new Vue({
+        el: '#project-list',
+        data: {
+            todos: [
+                {
+                    title: 'Bautista Clinic',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/bautista/1.png'
+                },
+                {
+                    title: 'S & J Inventory Management',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/inventory/1.png'
+                },
+                {
+                    title: 'Appliance Matters',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/appliance/1.png'
+                },
+                {
+                    title: 'MicroBlog',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/microblog/1.png'
+                },
+                {
+                    title: 'Procurement Management System',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/procurement/1.png'
+                },
+                {
+                    title: 'Nijo Online Shop',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/shop/1.png'
+                }
+            ]
+        }
+    })
+</script>
 
 </html>
