@@ -218,7 +218,7 @@ a:active {
 
 .hover-2-title {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 0;
   text-align: center;
   width: 100%;
@@ -246,6 +246,14 @@ a:active {
   opacity: 1;
 }
 
+.project-link {
+  position: absolute;
+  top: 80%;
+  left: 43%;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
 .hover-2:hover .hover-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(173, 46, 46, 0.1));
 }

@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="css/resume.css?v=1414" rel="stylesheet">
+    <link href="css/resume.css?v=9898" rel="stylesheet">
 
 </head>
 
@@ -68,10 +68,15 @@
                                 <img v-bind:src="todo.image" alt="">
                                 <div class="hover-overlay"></div>
                                 <div class="hover-2-content px-5 py-4">
-                                    <h3 class="hover-2-title text-uppercase font-weight-bold mb-0">
+                                    <h3 class="hover-2-title text-uppercase font-weight-bold">
                                         <span class="fw-bold text-white">{{ todo.title }}</span>
                                     </h3>
-                                    <p class="hover-2-description text-uppercase mb-0">{{ todo.description }}</p>
+                                    <p class="hover-2-description mb-0">{{ todo.tools }}</p>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-toggle="modal" data-bs-target="#displayProjectModal">
+                                        Learn More
+                                    </button>
+                                    <a v-bind:href="todo.link" class="project-link fw-bold text-white fs-6">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -117,32 +122,44 @@
                 {
                     title: 'Bautista Clinic',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
-                    image: 'img/bautista/1.png'
-                },
-                {
-                    title: 'S & J Inventory Management',
-                    description: ' Lorem ipsum dolor sit ametconsectetur',
-                    image: 'img/inventory/1.png'
-                },
-                {
-                    title: 'Appliance Matters',
-                    description: ' Lorem ipsum dolor sit ametconsectetur',
-                    image: 'img/appliance/1.png'
+                    image: 'img/bautista/1.png',
+                    tools: 'CakePHP',
+                    link: '//bautista-clinic.joselin-portfolio.tk'
                 },
                 {
                     title: 'MicroBlog',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
-                    image: 'img/microblog/1.png'
+                    image: 'img/microblog/1.png',
+                    tools: 'CakePHP',
+                    link: '//microblog.joselin-portfolio.tk'
                 },
                 {
                     title: 'Procurement Management System',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
-                    image: 'img/procurement/1.png'
+                    image: 'img/procurement/1.png',
+                    tools: 'ExpressJS / EJS',
+                    link: '//procurement-management.joselin-portfolio.tk'
+                },
+                {
+                    title: 'S & J Inventory Management',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/inventory/1.png',
+                    tools: 'Native PHP',
+                    link: '//s-j-marketing.joselin-portfolio.tk'
+                },
+                {
+                    title: 'Appliance Matters',
+                    description: ' Lorem ipsum dolor sit ametconsectetur',
+                    image: 'img/appliance/1.png',
+                    tools: 'Native PHP',
+                    link: '//appliance-matters.joselin-portfolio.tk'
                 },
                 {
                     title: 'Nijo Online Shop',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
-                    image: 'img/shop/1.png'
+                    image: 'img/shop/1.png',
+                    tools: 'Native PHP',
+                    link: '//nijo.joselin-portfolio.tk'
                 }
             ]
         }
