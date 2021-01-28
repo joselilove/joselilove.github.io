@@ -71,12 +71,13 @@
                                     <h3 class="hover-2-title text-uppercase font-weight-bold">
                                         <span class="fw-bold text-white">{{ todo.title }}</span>
                                     </h3>
-                                    <p class="hover-2-description mb-0">{{ todo.tools }}</p>
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-toggle="modal" data-bs-target="#displayProjectModal">
-                                        Learn More
-                                    </button>
-                                    <a v-bind:href="todo.link" target="_blank" class="project-link fw-bold text-white fs-6">View Site</a>
+                                    <p class="hover-3-description fw-bold mb-0"> {{ todo.tools }}</p>
+                                    <p class="hover-2-description mb-0">
+                                        {{ todo.username }}
+                                        {{ todo.password }}
+                                    </p>
+                                    <a v-bind:href="todo.link" target="_blank"
+                                        class="project-link fw-bold text-white fs-6">View Site</a>
                                 </div>
                             </div>
                         </div>
@@ -124,28 +125,36 @@
                     description: ' Lorem ipsum dolor sit ametconsectetur',
                     image: 'img/bautista/1.png',
                     tools: 'CakePHP',
-                    link: '//bautista-clinic.joselin-portfolio.tk'
+                    link: '//bautista-clinic.joselin-portfolio.tk',
+                    username: 'Username: selin1223',
+                    password: 'Password: 12345678zZ'
                 },
                 {
                     title: 'MicroBlog',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
                     image: 'img/microblog/1.png',
                     tools: 'CakePHP',
-                    link: '//microblog.joselin-portfolio.tk'
+                    link: '//microblog.joselin-portfolio.tk',
+                    username: 'Username: selin1223',
+                    password: 'Password: 12345678zZ'
                 },
                 {
                     title: 'Procurement Management System',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
                     image: 'img/procurement/1.png',
                     tools: 'ExpressJS / EJS',
-                    link: '//procurement-management.joselin-portfolio.tk'
+                    link: '//procurement-management.joselin-portfolio.tk',
+                    username: 'Username: espe',
+                    password: 'Password: qwerty'
                 },
                 {
                     title: 'S & J Inventory Management',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
                     image: 'img/inventory/1.png',
                     tools: 'Native PHP',
-                    link: '//s-j-marketing.joselin-portfolio.tk'
+                    link: '//s-j-marketing.joselin-portfolio.tk',
+                    username: 'Username: admin',
+                    password: 'Password: admin'
                 },
                 {
                     title: 'Appliance Matters',
@@ -159,7 +168,9 @@
                     description: ' Lorem ipsum dolor sit ametconsectetur',
                     image: 'img/shop/1.png',
                     tools: 'Native PHP',
-                    link: '//nijo.joselin-portfolio.tk'
+                    link: '//nijo.joselin-portfolio.tk',
+                    username: 'Username: admin',
+                    password: 'Password: admin1'
                 }
             ]
         }
