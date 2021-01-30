@@ -72,14 +72,16 @@
                                         <span class="fw-bold text-white">{{ todo.title }}</span>
                                     </h3>
                                     <p class="hover-3-description fw-bold mb-0"> {{ todo.tools }}</p>
-                                    <p class="hover-2-description mb-0">
-                                        {{ todo.username }}
-                                        {{ todo.password }}
-                                    </p>
                                     <a v-bind:href="todo.link" target="_blank"
                                         class="project-link fw-bold text-white fs-6">View Site</a>
                                 </div>
                             </div>
+                            <p class="mb-0">
+                                {{ todo.username }}
+                            </p>
+                            <p>
+                                {{ todo.password }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -98,13 +100,13 @@
                     <a href="mailto:macayananjoselin@gmail.com">macayananjoselin@gmail.com</a>
                 </div>
                 <div class="social-icons">
-                    <a href="https://github.com/joselilove">
+                    <a href="https://github.com/joselilove" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.facebook.com/jonh.macayanan">
+                    <a href="https://www.facebook.com/jonh.macayanan" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="file/joselin_macayanan_resume.pdf">
+                    <a href="file/joselin_macayanan_resume.pdf" target="_blank">
                         <i class="fas fa-file"></i>
                     </a>
                 </div>
