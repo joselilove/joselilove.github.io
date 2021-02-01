@@ -60,28 +60,64 @@
         <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="portfolio">
             <div class="w-100">
                 <h2 class="mb-5">Projects</h2>
-
                 <div class="container" id="project-list">
-                    <div class="row g-2">
-                        <div class="col-6" v-for="todo in todos">
-                            <div class="hover hover-2 text-white rounded">
-                                <img v-bind:src="todo.image" alt="">
-                                <div class="hover-overlay"></div>
-                                <div class="hover-2-content px-5 py-4">
-                                    <h3 class="hover-2-title text-uppercase font-weight-bold">
-                                        <span class="fw-bold text-white">{{ todo.title }}</span>
-                                    </h3>
-                                    <p class="hover-3-description fw-bold mb-0"> {{ todo.tools }}</p>
-                                    <a v-bind:href="todo.link" target="_blank"
-                                        class="project-link fw-bold text-white fs-6">View Site</a>
+                    <div class="row">
+                        <h3>Personal Projects</h3>
+                        <div v-for="todo in todos">
+                            <div class="col-6" v-if="todo.project_type == 'personal'">
+                                <div>
+                                    <div class="hover hover-2 text-white rounded">
+                                        <img v-bind:src="todo.image" alt="">
+                                        <div class="hover-overlay"></div>
+                                        <div class="hover-2-content px-5 py-4">
+                                            <h3 class="hover-2-title text-uppercase font-weight-bold">
+                                                <span class="fw-bold text-white">{{ todo.title }}</span>
+                                            </h3>
+                                            <p class="hover-3-description fw-bold mb-0"> {{ todo.tools }}</p>
+                                            <a v-bind:href="todo.link" target="_blank"
+                                                class="project-link fw-bold text-white fs-6">View Site</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0">
+                                            {{ todo.username }}
+                                        </p>
+                                        <p>
+                                            {{ todo.password }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <p class="mb-0">
-                                {{ todo.username }}
-                            </p>
-                            <p>
-                                {{ todo.password }}
-                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h3>Personal Projects</h3>
+                        <div v-for="todo in todos">
+                            <div class="col-6" v-if="todo.project_type == 'personal'">
+                                <div>
+                                    <div class="hover hover-2 text-white rounded">
+                                        <img v-bind:src="todo.image" alt="">
+                                        <div class="hover-overlay"></div>
+                                        <div class="hover-2-content px-5 py-4">
+                                            <h3 class="hover-2-title text-uppercase font-weight-bold">
+                                                <span class="fw-bold text-white">{{ todo.title }}</span>
+                                            </h3>
+                                            <p class="hover-3-description fw-bold mb-0"> {{ todo.tools }}</p>
+                                            <a v-bind:href="todo.link" target="_blank"
+                                                class="project-link fw-bold text-white fs-6">View Site</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0">
+                                            {{ todo.username }}
+                                        </p>
+                                        <p>
+                                            {{ todo.password }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,7 +165,8 @@
                     tools: 'CakePHP',
                     link: '//bautista-clinic.joselin-portfolio.tk',
                     username: 'Username: selin1223',
-                    password: 'Password: 12345678zZ'
+                    password: 'Password: 12345678zZ',
+                    project_type: 'personal'
                 },
                 {
                     title: 'MicroBlog',
@@ -138,7 +175,8 @@
                     tools: 'CakePHP',
                     link: '//microblog.joselin-portfolio.tk',
                     username: 'Username: selin1223',
-                    password: 'Password: 12345678zZ'
+                    password: 'Password: 12345678zZ',
+                    project_type: 'personal'
                 },
                 {
                     title: 'Procurement Management System',
@@ -147,7 +185,8 @@
                     tools: 'ExpressJS / EJS',
                     link: '//procurement-management.joselin-portfolio.tk',
                     username: 'Username: espe',
-                    password: 'Password: qwerty'
+                    password: 'Password: qwerty',
+                    project_type: 'academic'
                 },
                 {
                     title: 'S & J Inventory Management',
@@ -156,14 +195,16 @@
                     tools: 'Native PHP',
                     link: '//s-j-marketing.joselin-portfolio.tk',
                     username: 'Username: admin',
-                    password: 'Password: admin'
+                    password: 'Password: admin',
+                    project_type: 'academic'
                 },
                 {
                     title: 'Appliance Matters',
                     description: ' Lorem ipsum dolor sit ametconsectetur',
                     image: 'img/appliance/1.png',
                     tools: 'Native PHP',
-                    link: '//appliance-matters.joselin-portfolio.tk'
+                    link: '//appliance-matters.joselin-portfolio.tk',
+                    project_type: 'personal'
                 },
                 {
                     title: 'Nijo Online Shop',
@@ -172,7 +213,8 @@
                     tools: 'Native PHP',
                     link: '//nijo.joselin-portfolio.tk',
                     username: 'Username: jasmin',
-                    password: 'Password: jasmin'
+                    password: 'Password: jasmin',
+                    project_type: 'academic'
                 }
             ]
         }
